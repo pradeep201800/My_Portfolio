@@ -251,7 +251,8 @@ function initContactForm() {
   const status = document.querySelector("#form-status");
   const submitButton = form.querySelector("button[type='submit']");
   const receiver = String.fromCharCode(112,121,57,48,57,56,49,56,64,103,109,97,105,108,46,99,111,109);
-  form.action = `https://formsubmit.co/ajax/${receiver}`;
+  const endpointKey = "5ec2fb129b2128eef4fd523487f01fd8";
+  form.action = `https://formsubmit.co/ajax/${endpointKey}`;
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
